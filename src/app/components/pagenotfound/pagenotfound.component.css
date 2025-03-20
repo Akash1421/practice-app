@@ -1,0 +1,8 @@
+.page-not-found{ 
+    text-decoration: solid;
+    text-align: center;
+    
+}
+.page-not-found>.heading5{ 
+    color: brown;
+}
