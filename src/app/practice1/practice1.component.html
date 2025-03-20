@@ -6,8 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()"> 
-    
-   </form>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()"> 
+    <mat-form-field appearance="fill"> 
+        <mat-label>Input</mat-label>
+        <input matInput formControlName="input1">
+    </mat-form-field>
+    <mat-form-field appearance="fill"> 
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password':'text'" formControlname="password"/>
+        <button mat-icon-button matSuffix (click)="hide=!hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"> 
+            <mat-icon>{{hide ? 'visibility_off':'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+  </form>
 </body>
 </html>
